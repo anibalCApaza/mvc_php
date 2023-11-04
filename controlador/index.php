@@ -42,6 +42,27 @@ class ModeloControlador
         require_once("vista/editar.php");
     }
 
+    static function actualizar()
+    {
+        $id = $_REQUEST["id"];
+        $nombre = $_REQUEST["nombre"];
+        $precio = $_REQUEST["precio"];
+
+        $producto = new Modelo();
+        $dato = $producto->actualizar("productos", "nombre='" . $nombre . "', precio=" . $precio, "id=" . $id);
+
+        header("Location: " . urlsite);
+    }
+
+    static function eliminar()
+    {
+        $id = $_REQUEST["id"];
+        $producto = new Modelo();
+
+        $dato = $producto->eliminar("productos", "id=" . $id);
+
+        header("Location: " . urlsite);
+    }
 
 }
 

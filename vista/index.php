@@ -29,8 +29,8 @@ require_once("layouts/header.php");
                         <?= $value['precio']; ?>
                     </td>
                     <td>
-                        <a class="btn btn-warning" href="/index.php?m=editar&id=<?php $v['id'] ?>">EDITAR</a>
-                        <a class="btn btn-danger" href="/index.php?m=eliminar&id=<?php $v['id'] ?>">ELIMINAR</a>
+                        <a class=" btn btn-warning" href="index.php?m=editar&id=<?= $value['id'] ?>">EDITAR</a>
+                        <a class="btn btn-danger" href="index.php?m=eliminar&id=<?= $value['id'] ?>">ELIMINAR</a>
                     </td>
                 </tr>
 

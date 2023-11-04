@@ -44,7 +44,7 @@ class Modelo
 
     public function eliminar($tabla, $condicion)
     {
-        $consulta = "DELETE FROM" . $tabla . " WHERE " . $condicion . ";";
+        $consulta = "DELETE FROM " . $tabla . " WHERE " . $condicion . ";";
         $resultado = $this->db->query($consulta);
         if ($resultado) {
             return true;
